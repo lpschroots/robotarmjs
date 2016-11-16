@@ -1,84 +1,123 @@
-# RobotArmJS
+#Robotarm
 
-This library is an easy and enjoyable way to start learning the basics of programming using javascript. You can program a robot arm to move boxes in piles from one pile to another. For example: you can instruct the robot arm to scan the color of boxes and then sort these boxes to different piles according to their colors
-![robot arm](https://github.com/davinci-ao-studio/robotarmjs/blob/master/robotarm.png "Robot arm")
+Download: [ZeroBrane Studio](https://www.dropbox.com/s/0ek0uh61fwlk7ji/ZeroBraneStudio.zip?dl=0)
 
-##Getting started with this library
-* Create a HTML-page like this:
-``` html
-<html>
-    <body>
-        <canvas id="canvas" width="800" height="600"></canvas>
-        <script src="robot-arm.js"></script>
-        <script>
-            // Initialize the robot arm
-            var canvas = document.getElementById("canvas");
-            var robotArm = new RobotArm(canvas);
-            
-            // Either use loadLevel or randomLevel to create a start scene
-            robotArm.loadLevel("exercise 1");
-            
-            // My instructions come here
-            
-            
+##Oefening 1
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 1')
+```
+Verplaats het rode blok één plek naar links.
 
-            // Call run to run the animations
-            robotArm.run();
-        </script>
-    </body>
-</html>
-```
-* Put the robot-arm.js in the map where your HTML-page resides
-* Test your code running by loading your HTML-page in a modern browser
-* Use the console window in the developer tools (F12) of your browser to check if the code runs without errors
+![Oefening 1](readme/exercise1.png)
 
-##Methods you can use
-### robotArm.loadLevel(name)
-Displays the robot arm above a predefined set of piles of boxes according to the given *name*
-####code example
-``` Javascript
-robotArm.loadLevel('exercise 1');
+##Oefening 2
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 2')
 ```
-### robotArm.loadRandomLevel()
-Displays the robot arm above a random set of piles of boxes
-####code example
-``` Javascript
-robotArm.loadRandomLevel();
+Stappel alle blokken op aan de rechterkant.
+
+![Oefening 2](readme/exercise2.png)
+
+##Oefening 3
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 3')
 ```
-### robotArm.moveRight()
-Moves the robot arm to the right (to the next pile of boxes)
-####code example
-``` Javascript
-robotArm.moveRight();
+Verplaats de hele stapel blokken één plek naar rechts.
+
+![Oefening 3](readme/exercise3.png)
+
+##Oefening 4
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 4')
 ```
-###robotArm.moveLeft()
-Moves the robot arm to the left (to the previous pile of boxes)
-####code example
-``` Javascript
-robotArm.moveLeft();
+Verplaats de hele stapel blokken één plek naar rechts. Zorg ervoor dat de volgorde van de blokken gelijk blijft.
+
+![Oefening 4](readme/exercise4.png)
+
+##Oefening 5
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 6')
 ```
-###robotArm.grab()
-Grabs the highest box from the current pile of boxes. The arm will hold the box until it is dropped somewhere
-####code example
-``` Javascript
-robotArm.grab();
+Verplaats alle blokken één plek naar rechts. Zorg ervoor dat de volgorde van de blokken gelijk blijft. 
+
+![Oefening 5](readme/exercise6.png)
+
+##Oefening 6
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 7')
 ```
-###robotArm.drop()
-Drops the box the arm is holding on top of the current pile of boxes
-####code example
-``` Javascript
-robotArm.drop();
+Verplaats iedere stapel één plek naar links.
+
+Je mag maximaal 13 regels code gebruiken!
+
+![Oefening 6](readme/exercise7.png)
+
+##Oefening 7
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 8')
 ```
-###robotArm.scan()
-Scans the color of the box the arm is holding. The robotArm.scan() returns this color. If the arm is not holding any box then *null* is returned
-####code example
-``` Javascript
-color = robotArm.scan();
+Verplaats de stapel naar de rechterkant.
+
+Je mag maximaal 13 regels code gebruiken!
+
+![Oefening 7](readme/exercise8.png)
+
+##Oefening 8
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 9')
 ```
-##Properties you can set
-###robotArm.speed 
-Determines the speed of the animated robot arm. Default value is 50
-####code example
-``` Javascript
-robotArm.speed = 100;
+Verplaats alle stapels vijf stappen naar rechts.
+
+Je mag maximaal 15 regels code gebruiken!
+
+![Oefening 8](readme/exercise9.png)
+
+##Oefening 9
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 10')
 ```
+Draai de volgorde van de blokken om.
+
+Je mag maximaal 20 regels code gebruiken!
+
+![Oefening 9](readme/exercise10.png)
+
+##Oefening 10
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 11')
+```
+Verplaats alle witte blokken één plek naar rechts. 
+
+Let op, de blokken zijn iedere keer anders als je het programma start!
+
+![Oefening 10](readme/exercise11.png)
+
+##Oefening 11
+```lua
+require 'robot_arm'
+robot_arm:load_level('exercise 11')
+```
+Verplaats alle rode blokken naar het einde.
+
+Let op, de blokken zijn iedere keer anders als je het programma start!
+
+![Oefening 11](readme/exercise12.png)
+
+##Oefening 12
+```lua
+require 'robot_arm'
+robot_arm:random_level(1)
+```
+Verplaats alle blokken over de lege plaatsen, zodra er geen blokken meer zijn moet de arm stoppen.
+
+[Bonus opdrachten](https://www.dropbox.com/s/7q4o3xboi5whgop/RobotArm%20Puzzels.docx?dl=0)
